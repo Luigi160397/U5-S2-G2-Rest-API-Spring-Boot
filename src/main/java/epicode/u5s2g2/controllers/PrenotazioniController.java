@@ -1,13 +1,26 @@
 package epicode.u5s2g2.controllers;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import epicode.u5s2g2.entities.Prenotazione;
+import epicode.u5s2g2.services.PrenotazioniService;
+
 @RestController
 @RequestMapping("/prenotazioni")
 public class PrenotazioniController {
+	@Autowired
+	PrenotazioniService prenotService;
+
+	@GetMapping("")
+	public List<Prenotazione> getPrenotazioni() {
+		return prenotService.getPrenotazioni();
+	}
 
 	@GetMapping("/info")
 	public String infoGen() {

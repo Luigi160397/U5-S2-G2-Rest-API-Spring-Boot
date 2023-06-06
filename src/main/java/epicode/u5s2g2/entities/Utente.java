@@ -1,6 +1,5 @@
 package epicode.u5s2g2.entities;
 
-import java.util.List;
 import java.util.Random;
 
 import lombok.Getter;
@@ -14,20 +13,19 @@ public class Utente {
 	private String username;
 	private String nomeCompleto;
 	private String email;
-	private List<Prenotazione> prenotazioniInCorso;
 
-	public Utente(String username, String nomeCompleto, String email, List<Prenotazione> prenotazioniInCorso) {
+	public Utente(String username, String nomeCompleto, String email) {
 
 		this.username = username;
 		this.nomeCompleto = nomeCompleto;
 		this.email = email;
-		this.prenotazioniInCorso = prenotazioniInCorso;
+
 	}
 
 	@Override
 	public String toString() {
 		return "Utente [id=" + id + ", username=" + username + ", nomeCompleto=" + nomeCompleto + ", email=" + email
-				+ ", prenotazioniInCorso=" + prenotazioniInCorso + "]";
+				+ "]";
 	}
 
 }
