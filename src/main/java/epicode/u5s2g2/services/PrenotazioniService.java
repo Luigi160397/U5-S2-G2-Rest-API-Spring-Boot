@@ -36,4 +36,11 @@ public class PrenotazioniService {
 	public List<Prenotazione> getPrenotazioni() {
 		return this.prenotazioni;
 	}
+
+	public Prenotazione saveNewPrenotazione(Prenotazione prenotazione) {
+
+		this.prenotazioni.add(prenotazione);
+		return prenotazione;
+
+	}
 }
